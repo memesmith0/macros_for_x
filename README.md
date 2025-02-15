@@ -35,7 +35,7 @@
 #if "~" is a command in x change that string to something unique that is not planned to go into the grammar of x
 mcr5(){ (m(){ (unset f l c;while read -r l;do if [ "~" = "$l" ] ;then read -r l;c="$c$l";read -r l;f="$f$l";else echo "$l"|awk "$f{l=\$0}END{$c print l}"||exit;fi;done);};m|m)};
 mcr5_x{ mcr5; } #nothing special needs to be changed about mcr5 to make it compatible with x
-mcr5_x_interpreter(){ x_macros | sh -c "$1" >&2;}; #"$1" must be an interpreter for x
+mcr5_x_interpreter(){ mcr5_x | sh -c "$1" >&2;}; #"$1" must be an interpreter for x
 mcr5_x_interpeter "$1"; # if this doesnt work comment out the line and uncomment the next line
 #mcr5_x #you are meant to send your source code for x including the inline macros into stdin
 
