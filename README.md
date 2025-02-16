@@ -57,7 +57,7 @@ interpreter="" #if you want an interpreter change interpreter to be a shell comm
                #if you want the shell as an additional layer to the macros change the interpreter string to "sh"
 
 #this is the code that will allow you to turn your language into a macro language
-mcr14_x{ mcr14 "$macro_system" "$interpreter"; } #change _x to be the name of your language.
+mcr14_your_langauge_name(){ mcr14 "$macro_system" "$interpreter"; } #change _x to be the name of your language.
 
 
 #some x code;
